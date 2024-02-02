@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://cr10vxjvr63ys"]
+
+[ext_resource type="Script" path="res://pipe_spawner.gd" id="1_784u3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ntqqh"]
+size = Vector2(99, 348)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_2xgww"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u5vh0"]
+size = Vector2(99, 355)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_pgjt8"]
+
+[node name="PipeSpawner" type="Node2D" groups=["pipe_spawner"]]
+script = ExtResource("1_784u3")
+
+[node name="Top" type="Area2D" parent="."]
+position = Vector2(1106, 51)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Top"]
+position = Vector2(-0.5, 125)
+shape = SubResource("RectangleShape2D_ntqqh")
+debug_color = Color(0.462745, 0.454902, 0.976471, 0.419608)
+
+[node name="Sprite2D" type="Sprite2D" parent="Top"]
+modulate = Color(0.694118, 0.592157, 0.917647, 1)
+position = Vector2(-1, 124.5)
+scale = Vector2(95, 355)
+texture = SubResource("CanvasTexture_2xgww")
+
+[node name="Bottom" type="Area2D" parent="."]
+position = Vector2(1108, 625)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom"]
+position = Vector2(-0.5, -77.5)
+shape = SubResource("RectangleShape2D_u5vh0")
+debug_color = Color(0.898039, 0.192157, 0.113725, 0.419608)
+
+[node name="Sprite2D" type="Sprite2D" parent="Bottom"]
+modulate = Color(0.694118, 0.592157, 0.917647, 1)
+position = Vector2(-0.499957, -77)
+scale = Vector2(95, 355)
+texture = SubResource("CanvasTexture_pgjt8")

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cb1wijbjc60pw"]
+
+[ext_resource type="Script" path="res://bird.gd" id="1_0kep7"]
+[ext_resource type="Texture2D" uid="uid://squv0vknnktv" path="res://images/neko_icon.png" id="2_2flyo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_chpmb"]
+radius = 36.0139
+
+[node name="Bird" type="CharacterBody2D"]
+script = ExtResource("1_0kep7")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.416667, 0.411458)
+texture = ExtResource("2_2flyo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_chpmb")
